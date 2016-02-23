@@ -14,6 +14,7 @@ Install dependencies
 - `sudo apt-get install -y emacs git gcc libzmq3-dev python2.7-dev python-pip`
 - `sudo pip install numpy`
 - `sudo pip install protobuf`
+- `pip install future`
 
 Install rust (we currently need the nightly build)
 
