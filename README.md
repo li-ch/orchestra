@@ -34,7 +34,7 @@ Install cprotobuf
 - `cd ~`
 - `git clone https://github.com/pcmoritz/cprotobuf.git`
 - `cd cprotobuf`
-- `python setup.py install`
+- `sudo python setup.py install`
 
 Clone Orchestra and create schema
 
@@ -42,11 +42,13 @@ Clone Orchestra and create schema
 - `git clone https://github.com/amplab/orchestra.git`
 - `cd orchestra/schema`
 - `bash make-schema.sh`
-- `cd $HOME/orchestra`
+- `cd ~/orchestra`
 - add `export LD_LIBRARY_PATH=$HOME/orchestra/target/debug/:$LD_LIBRARY_PATH` to `~/.bashrc`
 
 Build orchpy
-- cd `~/orchestra/lib/orchpy/`
+- `cd ~/orchestra`
+- `cargo build`
+- `cd lib/orchpy/`
 - `python setup.py build`
 - add something like `export PYTHONPATH=PATH_TO_ORCHESTRA/orchestra/lib/orchpy/build/lib.linux-x86_64-2.7:$PYTHONPATH` to `~/.bashrc`, this will vary depending on your operating system
 - add something like `export PYTHONPATH=PATH_TO_ORCHESTRA/orchestra/lib:$PYTHONPATH` to `~/.bashrc`
